@@ -5,6 +5,7 @@ import Nav from "./Nav";
 
 import Cart from "./Cart/Cart";
 import { useEffect, useState } from "react";
+import routes from "../routes.json";
 
 const RouteSwitch = () => {
   const [isShownCart, setIsShownCart] = useState(false);
@@ -90,9 +91,9 @@ const RouteSwitch = () => {
     <Router>
       <Nav toggleCart={toggleCart} theme={theme} toggleTheme={toggleTheme} cartItems={cartItems} />
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/shop" element={<Shop addToCart={addToCart} />} />
-        <Route path="/shop/:pageNum" element={<Shop addToCart={addToCart} />} />
+        <Route path={routes.HOME} element={<Homepage />} />
+        <Route path={routes.SHOP} element={<Shop addToCart={addToCart} />} />
+        <Route path={`${routes.SHOP}/:pageNum`} element={<Shop addToCart={addToCart} />} />
       </Routes>
       {isShownCart && (
         <Cart

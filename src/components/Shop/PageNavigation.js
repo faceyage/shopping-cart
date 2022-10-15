@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import routes from "../../routes.json";
 function PageNavigation({ products, currPage }) {
   //max page per page
   const maxPage = 9;
@@ -10,7 +10,7 @@ function PageNavigation({ products, currPage }) {
   return (
     <div className="page-nav">
       {hasPrevPage ? (
-        <Link to={`/shop/${currPage - 1}`}>
+        <Link to={`${routes.SHOP}/${currPage - 1}`}>
           <button className="btn">Prev</button>
         </Link>
       ) : (
@@ -20,7 +20,7 @@ function PageNavigation({ products, currPage }) {
       )}
 
       {hasNextPage ? (
-        <Link to={`/shop/${currPage + 1}`}>
+        <Link to={`${routes.SHOP}/${currPage + 1}`}>
           <button className="btn">Next</button>
         </Link>
       ) : (

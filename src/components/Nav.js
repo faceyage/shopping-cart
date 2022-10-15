@@ -3,7 +3,7 @@ import { ReactComponent as SearchLogo } from "../images/search.svg";
 import { ReactComponent as ShoppingLogo } from "../images/shopping-cart.svg";
 import { ReactComponent as DarkLogo } from "../images/dark-mode.svg";
 import { ReactComponent as LightLogo } from "../images/light-mode.svg";
-
+import routes from "../routes.json";
 const Nav = ({ toggleCart, theme, toggleTheme, cartItems }) => {
   const cartLength = cartItems.reduce((total, curr) => {
     return total + curr.quantity;
@@ -12,7 +12,7 @@ const Nav = ({ toggleCart, theme, toggleTheme, cartItems }) => {
   return (
     <nav>
       <div className="logo">
-        <Link to="/">Shop App</Link>
+        <Link to={routes.HOME}>Shop App</Link>
       </div>
       <div className="searchBar">
         <input type="text" name="search" id="search" placeholder="search not working" />
@@ -27,10 +27,10 @@ const Nav = ({ toggleCart, theme, toggleTheme, cartItems }) => {
           )}
         </li>
         <li>
-          <Link to="/">Home</Link>
+          <Link to={routes.HOME}>Home</Link>
         </li>
         <li>
-          <Link to="/shop">Products</Link>
+          <Link to={routes.SHOP}>Products</Link>
         </li>
         <li>
           <div className="card" onClick={toggleCart}>
