@@ -1,0 +1,96 @@
+@use "../abstracts/" as *;
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: var(--nav-color);
+  height: 12vh;
+  color: var(--text-color2);
+  box-shadow: 0px 0px 20px 0px black;
+
+  a {
+    color: var(--text-color2);
+  }
+
+  .searchBar {
+    position: relative;
+    @include flex-center();
+    input {
+      width: 20rem;
+      padding: 0.6rem 1rem;
+      border-radius: 1rem;
+      color: var(--text-color);
+      background-color: var(--secondary-color);
+      border: none;
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid black;
+        outline: 2px solid white;
+        &::placeholder {
+          color: rgb(81, 81, 81);
+        }
+      }
+    }
+    .search-icon {
+      cursor: pointer;
+      color: var(--text-color);
+
+      //position
+      position: absolute;
+      right: 0.7rem;
+    }
+  }
+
+  .nav-items {
+    display: flex;
+    width: 22rem;
+    // gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    font-size: x-large;
+    li {
+      cursor: pointer;
+    }
+
+    .lightLogo,
+    .darkLogo {
+      width: 2rem;
+    }
+
+    .darkLogo {
+      fill: white;
+    }
+  }
+
+  .card {
+    @include flex-center;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: relative;
+
+    .current-count {
+      color: var(--text-color2);
+      width: 2.3rem;
+      height: 2.3rem;
+      border-radius: 50%;
+      background-color: var(--third-color);
+
+      //position
+      position: absolute;
+      top: 3.5rem;
+      right: 3rem;
+      @include flex-center;
+    }
+  }
+}

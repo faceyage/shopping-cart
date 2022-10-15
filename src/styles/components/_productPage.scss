@@ -1,0 +1,53 @@
+@use "../abstracts/" as *;
+
+/* 
+! this productPage currently in development and don't use it!
+*/
+
+.productPage {
+  @include flex-center;
+  padding: 0 20rem;
+  margin-top: 1rem;
+
+  & > * {
+    flex: 1;
+  }
+
+  .left {
+    @include flex-center;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 70%;
+
+    .title {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    .desc {
+      font-size: larger;
+    }
+    .price {
+      font-size: 2rem;
+    }
+
+    .btn {
+    }
+  }
+}
+
+.comments {
+  height: 2rem;
+
+  .comment {
+    background-color: black;
+    font-size: large;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    width: 60%;
+  }
+}

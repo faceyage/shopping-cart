@@ -1,0 +1,52 @@
+@use "../abstracts/" as *;
+
+.app .products {
+  margin: 0 20rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 5rem;
+
+  .product-preview {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+
+    height: 20rem;
+    width: 22rem;
+    border-radius: 1rem;
+    border: 1px solid var(--text-color);
+    background-color: var(--card-color);
+    box-shadow: 0px 0px 10px 2px var(--text-color);
+
+    & > * {
+      flex: 1;
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .title {
+      font-size: larger;
+    }
+
+    img {
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  margin-bottom: 1rem;
+}

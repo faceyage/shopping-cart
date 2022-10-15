@@ -1,0 +1,37 @@
+/*
+* colors for page
+!must import top of general css file
+*/
+
+/*
+* dark theme
+*/
+
+:root {
+  --bg-color: #000e1b;
+  --card-color: #000007;
+  --text-color: white;
+  --text-color2: white;
+  --secondary-color: rgb(30, 30, 71);
+  --third-color: rgb(114, 52, 63);
+  --hover-color: rgb(30, 30, 71, 0.7);
+  --nav-color: black;
+  --cart-color: #14202f;
+}
+
+/*
+* light theme 
+*/
+
+:root[data-theme="light"] {
+  --bg-color: white;
+  --card-color: #cbd5e1;
+  --card-color2: #cbd5e1;
+  --text-color: black;
+  --text-color2: white;
+  --secondary-color: white;
+  --third-color: rgb(255, 153, 153);
+  --hover-color: rgb(0, 0, 0, 1);
+  --nav-color: black;
+  --cart-color: white;
+}
