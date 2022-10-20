@@ -21,6 +21,13 @@
     background-color: var(--card-color);
     box-shadow: 0px 0px 10px 2px var(--text-color);
 
+    animation: opacity-animation 2s;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
     & > * {
       flex: 1;
     }
