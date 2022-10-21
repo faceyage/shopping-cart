@@ -1,15 +1,13 @@
 @use "./abstracts/" as *;
 @use "./components/" as c;
 
+.root {
+  display: flex;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
 }
 
 .logo {
@@ -42,6 +40,9 @@ body {
   &:hover:disabled {
     background-color: rgb(77, 3, 3);
     color: var(--text-color2);
+  }
+  &:focus {
+    outline: 3px solid var(--text-color);
   }
 
   &:disabled {

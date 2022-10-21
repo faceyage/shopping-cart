@@ -10,36 +10,38 @@ const Nav = ({ toggleCart, theme, toggleTheme, cartItems }) => {
   }, 0);
 
   return (
-    <nav>
-      <div className="logo">
-        <Link to={routes.HOME}>Shop App</Link>
-      </div>
-      <div className="searchBar">
-        <input type="text" name="search" id="search" placeholder="search not working" />
-        <SearchLogo className="search-icon" />
-      </div>
-      <ul className="nav-items">
-        <li onClick={toggleTheme}>
-          {theme === "light" ? (
-            <LightLogo className="lightLogo" />
-          ) : (
-            <DarkLogo className="darkLogo" />
-          )}
-        </li>
-        <li>
-          <Link to={routes.HOME}>Home</Link>
-        </li>
-        <li>
-          <Link to={routes.SHOP}>Products</Link>
-        </li>
-        <li>
-          <div className="card" onClick={toggleCart}>
-            <ShoppingLogo />
-            {cartLength > 0 && <div className="current-count">{cartLength}</div>}
-          </div>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav>
+        <div className="logo">
+          <Link to={routes.HOME}>Shop App</Link>
+        </div>
+        <div className="searchBar">
+          <input type="text" name="search" id="search" placeholder="search not working" />
+          <SearchLogo className="search-icon" />
+        </div>
+        <ul className="nav-items">
+          <li onClick={toggleTheme}>
+            {theme === "light" ? (
+              <LightLogo className="lightLogo" />
+            ) : (
+              <DarkLogo className="darkLogo" />
+            )}
+          </li>
+          <li>
+            <Link to={routes.HOME}>Home</Link>
+          </li>
+          <li>
+            <Link to={routes.SHOP}>Products</Link>
+          </li>
+          <li>
+            <button className="card" onClick={toggleCart} aria-label="shopping card">
+              <ShoppingLogo />
+              {cartLength > 0 && <div className="current-count">{cartLength}</div>}
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

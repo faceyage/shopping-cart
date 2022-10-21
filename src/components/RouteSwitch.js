@@ -90,20 +90,22 @@ const RouteSwitch = () => {
   return (
     <Router>
       <Nav toggleCart={toggleCart} theme={theme} toggleTheme={toggleTheme} cartItems={cartItems} />
-      <Routes>
-        <Route path={routes.HOME} element={<Homepage />} />
-        <Route path={routes.SHOP} element={<Shop addToCart={addToCart} />} />
-        <Route path={`${routes.SHOP}/:pageNum`} element={<Shop addToCart={addToCart} />} />
-      </Routes>
-      {isShownCart && (
-        <Cart
-          cartItems={cartItems}
-          exitCart={exitCart}
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          handlePurchase={handlePurchase}
-        />
-      )}
+      <main>
+        <Routes>
+          <Route path={routes.HOME} element={<Homepage />} />
+          <Route path={routes.SHOP} element={<Shop addToCart={addToCart} />} />
+          <Route path={`${routes.SHOP}/:pageNum`} element={<Shop addToCart={addToCart} />} />
+        </Routes>
+        {isShownCart && (
+          <Cart
+            cartItems={cartItems}
+            exitCart={exitCart}
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+            handlePurchase={handlePurchase}
+          />
+        )}
+      </main>
     </Router>
   );
 };

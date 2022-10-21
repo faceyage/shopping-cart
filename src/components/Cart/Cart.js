@@ -6,9 +6,9 @@ const Cart = ({ cartItems, exitCart, addToCart, removeFromCart, handlePurchase }
   }, 0);
   return (
     <div className="cart">
-      <div className="exitBtn" onClick={exitCart}>
+      <button className="exitBtn" onClick={exitCart} aria-label="exit cart">
         X
-      </div>
+      </button>
       <h1>Shopping Cart</h1>
       <div className="cart-items">
         {cartItems.map((product) => {

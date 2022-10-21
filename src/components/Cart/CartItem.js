@@ -14,6 +14,7 @@ function CartItem({ product, addToCart, removeFromCart }) {
         <div className="quantityCard">
           <button
             className="btn"
+            aria-label="decrement quantity"
             onClick={() => {
               removeFromCart(product);
             }}>
@@ -22,6 +23,7 @@ function CartItem({ product, addToCart, removeFromCart }) {
           <div className="quantity">{quantity}</div>
           <button
             className="btn"
+            aria-label="increment quantity"
             onClick={() => {
               addToCart(product);
             }}>

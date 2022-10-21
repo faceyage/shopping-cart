@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+main {
+  flex: 2;
+  @include flex-center;
+}

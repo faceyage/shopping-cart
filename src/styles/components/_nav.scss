@@ -57,8 +57,6 @@ nav {
 
     font-size: x-large;
     li {
-      cursor: pointer;
-
       //add animation effect
       transition: transform 0.3s ease-in-out;
 
@@ -69,6 +67,7 @@ nav {
 
     .lightLogo,
     .darkLogo {
+      cursor: pointer;
       width: 2rem;
     }
 
@@ -79,6 +78,7 @@ nav {
 
   .card {
     @include flex-center;
+    cursor: pointer;
     background-color: var(--secondary-color);
     color: var(--text-color);
     width: 5rem;
