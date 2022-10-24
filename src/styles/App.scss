@@ -50,6 +50,13 @@ body {
   }
 }
 
+//mobile btn
+.btn {
+  @include mobile {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
 a {
   text-decoration: none;
   color: var(--text-color);

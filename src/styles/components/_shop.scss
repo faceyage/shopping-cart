@@ -57,3 +57,26 @@
   gap: 20rem;
   margin-bottom: 1rem;
 }
+
+//mobile style
+.shop .products {
+  @include mobile {
+    padding: 1rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    .product-preview {
+      max-width: 10rem;
+      height: auto;
+      padding: 0.3rem 0;
+      img {
+        width: 5rem;
+        height: auto;
+      }
+    }
+  }
+}
+
+.page-nav {
+  @include mobile {
+    gap: 2rem;
+  }
+}

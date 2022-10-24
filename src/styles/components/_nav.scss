@@ -9,6 +9,7 @@ nav {
   height: 12vh;
   color: var(--text-color2);
   box-shadow: 0px 0px 20px 0px black;
+  max-width: 1920px;
 
   a {
     color: var(--text-color2);
@@ -98,6 +99,39 @@ nav {
       top: 3.5rem;
       right: 3rem;
       @include flex-center;
+    }
+  }
+}
+
+//nav mobile
+
+nav {
+  @include mobile {
+    .logo {
+      font-size: medium;
+    }
+
+    .searchBar {
+      display: none;
+    }
+
+    .nav-items {
+      font-size: medium;
+    }
+
+    .card {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      .current-count {
+        width: 1.1rem;
+        height: 1.1rem;
+
+        //position
+        top: 1.5rem;
+        right: 1.5rem;
+        @include flex-center;
+      }
     }
   }
 }

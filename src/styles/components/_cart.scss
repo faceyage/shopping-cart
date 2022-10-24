@@ -100,3 +100,37 @@
     color: var(--text-color);
   }
 }
+
+//mobile design
+
+.cart {
+  @include mobile {
+    padding: 1rem;
+    width: 60vw;
+
+    .cart-items {
+      gap: 1rem;
+      .product {
+        .left {
+          img {
+            object-fit: contain;
+          }
+        }
+
+        .right {
+          font-size: small;
+        }
+      }
+    }
+
+    .quantityCard {
+      .btn {
+        padding: 0.1rem 0.4rem;
+        .remove,
+        .add {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
